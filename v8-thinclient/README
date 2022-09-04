@@ -1,1 +1,5 @@
-Just a placeholder for now
+Как это работает:
+
+1. Положить в эту папку скачанный с releases.1c.ru архив *.tar.gz с тонким клиентом, содержащий пакеты для Debian/Ubuntu amd64;
+2. docker compose up;
+3. profit!!!;
