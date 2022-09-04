@@ -5,10 +5,13 @@ RUN echo "deb http://deb.debian.org/debian stretch main" >> /etc/apt/sources.lis
 RUN echo "deb http://deb.debian.org/debian bullseye contrib non-free" >> /etc/apt/sources.list
 RUN apt update
 RUN apt install -y libwebkitgtk-3.0-0 unixodbc xauth openssl ca-certificates ttf-mscorefonts-installer locales
+
+ENV LC_ALL=ru_RU.UTF-8
 RUN echo "ru_RU.UTF-8 UTF-8" > /etc/locale.gen
 RUN locale-gen
 
 ENV XAUTHORITY=~/.Xauthority
+
 
 COPY ./v8-thinclient/* /home/v8
 RUN tar -xvf /home/v8/*.tar.gz -C /home/v8/

@@ -6,7 +6,6 @@ services:
     build: .
     environment:
       - DISPLAY=${DISPLAY}
-      - LC_ALL=ru_RU.UTF-8
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - $HOME/.Xauthority:/root/.Xauthority:rw
