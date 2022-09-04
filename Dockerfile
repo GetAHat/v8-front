@@ -2,11 +2,9 @@ FROM debian:bullseye
 
 RUN echo "ru_RU.UTF-8" > /etc/locale.gen
 RUN mkdir -p /home/v8
-# RUN apt-add-repository non-free
 RUN echo "deb http://deb.debian.org/debian stretch main" >> /etc/apt/sources.list
 RUN echo "deb http://deb.debian.org/debian bullseye contrib non-free" >> /etc/apt/sources.list
 RUN apt update
-RUN apt install debconf locales && dpkg-reconfigure locales
 RUN apt install -y libwebkitgtk-3.0-0 unixodbc xauth openssl ca-certificates ttf-mscorefonts-installer
 
 ENV XAUTHORITY=~/.Xauthority
