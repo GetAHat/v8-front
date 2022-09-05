@@ -2,7 +2,7 @@ version: "3"
 
 services:
   app:
-    image: v8-thin:0.1
+    image: v8-thick:0.1
     build: .
     user: v8user
     environment:
@@ -10,8 +10,9 @@ services:
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - $HOME/.Xauthority:/root/.Xauthority:rw
-      - persistent-data:$HOME/.1cv8
-      - $docs_folder/v8c_shared:/home/v8user
+      - persistent-conf:$HOME/.1cv8
+      - $docs_folder/v8c_shared:/home/v8user/shared
+      - $v8appfolder:/home/v8user/v8bases
     network_mode: host
 volumes:
-  persistent-data:
+  persistent-conf:
