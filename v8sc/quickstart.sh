@@ -10,7 +10,7 @@ do
 done
 
  if [[ $(echo $ver) ]]; then 
-    export docs_folder=$(xdg-user-dir DOCUMENTS)/v8shared
+    export docs_folder=$(xdg-user-dir DOCUMENTS)/v8_shared
     export v8appfolder=$HOME/v8bases
     export v8ver=$ver
     mkdir -p $docs_folder
