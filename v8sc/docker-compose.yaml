@@ -7,11 +7,12 @@ services:
     user: v8user
     environment:
       - DISPLAY=${DISPLAY}
+      - v8ver=$v8ver
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - $HOME/.Xauthority:/root/.Xauthority:rw
       - persistent-conf:$HOME/.1cv8
-      - $docs_folder/v8c_shared:/home/v8user/shared
+      - $docs_folder:/home/v8user/shared
       - $v8appfolder:/home/v8user/v8bases
     network_mode: host
 volumes:

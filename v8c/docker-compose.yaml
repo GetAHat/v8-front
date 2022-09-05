@@ -11,7 +11,7 @@ services:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - $HOME/.Xauthority:/root/.Xauthority:rw
       - persistent-data:$HOME/.1cv8
-      - $docs_folder/v8c_shared:/home/v8user
+      - $docs_folder:/home/v8user
     network_mode: host
 volumes:
   persistent-data:
